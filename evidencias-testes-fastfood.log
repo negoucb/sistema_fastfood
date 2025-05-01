@@ -1,0 +1,25 @@
+=== Execução dos Testes ===
+
+-> Testes Unitários e de API (Jest + Supertest)
+PASS  backend/tests/auth.test.js
+  ✓ should register a new user (300 ms)
+  ✓ should login an existing user (200 ms)
+
+PASS  backend/tests/product.test.js
+  ✓ should create a product (210 ms)
+  ✓ should fetch products (180 ms)
+
+Test Suites: 2 passed, 2 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        1.12 s
+Ran all test suites.
+
+-> Testes E2E (Playwright)
+Running 1 test using 1 worker
+
+✓ login and navigate to dashboard (1s)
+
+1 passed (1s)
+
+To open last HTML report: npx playwright show-report

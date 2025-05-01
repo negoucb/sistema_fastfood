@@ -1,0 +1,87 @@
+DOCUMENTAÇÃO DE REQUISITOS – SISTEMA FASTFOOD
+
+1. VISÃO GERAL DO SISTEMA
+O sistema desenvolvido tem como objetivo gerenciar pedidos de uma lanchonete (fast-food), permitindo o cadastro de usuários, autenticação, e controle de produtos e pedidos. Ele possui interface web, backend com API REST, e persistência em banco de dados.
+
+Funcionalidades principais:
+
+- Tela de login e autenticação de usuários.
+
+- CRUD de usuários e produtos.
+
+- Interface web com navegação por páginas.
+
+- API backend conectada a banco de dados (Prisma + SQLite).
+
+- Testes automatizados: unitários, de API e E2E.
+
+2. DOCUMENTO DE VISÃO
+Nome do Projeto: FastFood System
+
+Propósito: Gerenciar pedidos, usuários e produtos em um ambiente de lanchonete com foco em simplicidade e testes de qualidade.
+
+Público-Alvo: Funcionários e administradores de uma lanchonete.
+
+Plataformas: Navegador Web (frontend React), Backend Node.js com API REST.
+Tecnologias utilizadas: React, Node.js, Express, Prisma ORM, SQLite, Jest, Supertest, Cypress.
+
+3. HISTÓRIAS DE USUÁRIO
+
+História 1 – Cadastro de Produto
+
+Como administrador,
+Quero cadastrar novos produtos no sistema,
+Para que possam ser oferecidos no cardápio.
+
+Critérios de Aceitação:
+
+O produto deve ter nome, descrição e preço.
+
+O sistema deve validar campos obrigatórios.
+
+Cenário BDD:
+
+Cenário: Cadastro de produto válido  
+Dado que estou logado como administrador  
+E estou na página de cadastro de produtos  
+Quando preencho os campos corretamente  
+E clico em "Salvar"  
+Então o produto deve ser salvo no banco de dados  
+E deve aparecer na lista de produtos
+
+
+4. PLANEJAMENTO DE TESTES
+
+Objetivo dos testes:
+Garantir que todas as funcionalidades críticas do sistema estejam funcionando corretamente e livre de regressões.
+
+Escopo:
+
+- Testes de autenticação, produtos, usuários.
+
+- Não serão testadas integrações externas ou autenticação OAuth.
+
+Ferramentas:
+
+- Unitários: Jest (backend)
+
+- API: Supertest
+
+- E2E: Cypress
+
+Estratégia:
+
+- Testar fluxos críticos do sistema (login, cadastro, pedidos).
+
+- Adotar cobertura mínima de 80% nas principais rotas da API.
+
+Papéis :
+
+- Gabriel: Backend e testes unitários
+
+- Gustavo e Wilton: Frontend e testes E2E
+
+- Fernando: Planejamento de testes e documentação
+
+- Filipe: Testes de API e integração
+
